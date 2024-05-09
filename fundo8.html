@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito de Onda Diagonal</title>
+    <style>
+        @keyframes wave {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-20px, -20px);
+            }
+            50% {
+                transform: translate(0, -40px);
+            }
+            75% {
+                transform: translate(20px, -20px);
+            }
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            display: flex;
+            flex-direction: column; /* Alterado para coluna */
+            align-items: center; /* Centraliza as colunas horizontalmente */
+            justify-content: space-around;
+        }
+
+        .column {
+            background: linear-gradient(to bottom right, #8e9eab, #eef2f3); /* Gradiente diagonal */
+            width: 100%;
+            height: 10%;
+            animation: wave 3s ease-in-out infinite;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos adicionais para a página */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+       /* Posicionamento central dos objetos */
+       .centro {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  /* Estilo para os botões */
+  .buttons {
+      top: 10%;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+    
+    .buttons button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Conteúdo da página com barra de rolagem oculta -->
+<div class="content">
+
+    <!-- Botões centralizados -->
+<div class="buttons">
+  <h1>Bem-vindo ao Site com Animações!</h1>
+  <p>Aqui você encontrará animações divertidas.</p>
+
+  <button onclick="window.location.href='index.html';">Botão 1</button>
+  <button onclick="window.location.href='fundo2.html';">Botão 2</button>
+  <button onclick="window.location.href='fundo3.html';">Botão 3</button>
+  <button onclick="window.location.href='fundo4.html';">Botão 4</button>
+  <button onclick="window.location.href='fundo5.html';">Botão 5</button>
+  <button onclick="window.location.href='fundo6.html';">Botão 6</button>
+  <button onclick="window.location.href='fundo7.html';">Botão 7</button>
+  <button onclick="window.location.href='fundo8.html';">Botão 8</button>
+  <button onclick="window.location.href='fundo9.html';">Botão 9</button>
+  <button onclick="window.location.href='fundo1.html';">Botão 10</button>
+
+</div>
+
+    <div class="content">
+        <h1>Efeito de Onda Diagonal</h1>
+        <p>Este é um exemplo de como aplicar um efeito de onda diagonal utilizando CSS.</p>
+        <p>Os elementos se movem em uma diagonal criando um efeito de "ondulação".</p>
+        <p>Lembre-se de ajustar os valores e os tempos de delay conforme necessário para obter o efeito desejado.</p>
+    </div>
+</div>
+    <div class="background">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+</body>
+</html>

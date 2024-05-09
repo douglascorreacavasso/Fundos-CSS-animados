@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundo Animado com Colunas</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /*background-color: #f5f5f5;  Cor de fundo */
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: flex-start; /* Alinhamento das colunas no início */
+  }
+
+  .column {
+    background: linear-gradient(to bottom, #cccccc, transparent); /* Gradiente de cinza para transparente */
+    width: 2%; /* Largura de 2% da largura da página */
+    height: 100%;
+    opacity: 0.5;
+    animation: fadeInOut 5s infinite;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.5; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    color: black; /* Cor do texto */
+  }
+    /* Posicionamento central dos objetos */
+    .centro {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  /* Estilo para os botões */
+  .buttons {
+      top: 10%;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+    
+    .buttons button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Conteúdo da página com barra de rolagem oculta -->
+<div class="content">
+ 
+    <!-- Botões centralizados -->
+<div class="buttons">
+ <h1>Bem-vindo ao Site com  Animações!</h1>
+  <p>Aqui você encontrará animações divertidas.</p>
+
+  <button onclick="window.location.href='index.html';">Botão 1</button>
+  <button onclick="window.location.href='fundo2.html';">Botão 2</button>
+  <button onclick="window.location.href='fundo3.html';">Botão 3</button>
+  <button onclick="window.location.href='fundo4.html';">Botão 4</button>
+  <button onclick="window.location.href='fundo5.html';">Botão 5</button>
+  <button onclick="window.location.href='fundo6.html';">Botão 6</button>
+  <button onclick="window.location.href='fundo7.html';">Botão 7</button>
+  <button onclick="window.location.href='fundo8.html';">Botão 8</button>
+  <button onclick="window.location.href='fundo9.html';">Botão 9</button>
+  <button onclick="window.location.href='fundo1.html';">Botão 10</button>
+
+</div>
+</div>
+
+<div class="background">
+  <!-- Criando 50 colunas -->
+<!-- Repetição das colunas para preencher a largura da página -->
+<!-- Cada coluna terá um delay de animação ligeiramente diferente -->
+<!-- O delay é incrementado em 0.1s para cada coluna subsequente -->
+<!-- Isso cria um efeito de onda através das colunas -->
+<!-- O código abaixo é um exemplo para as primeiras 5 colunas -->
+<!-- Você deve repetir o padrão até completar 50 colunas -->
+<!-- Continue adicionando mais colunas aqui -->
+
+<div class="column" style="animation-delay: 0s;"></div>
+<div class="column" style="animation-delay: 0.1s;"></div>
+<div class="column" style="animation-delay: 0.2s;"></div>
+<div class="column" style="animation-delay: 0.3s;"></div>
+<div class="column" style="animation-delay: 0.4s;"></div>
+
+<div class="column" style="animation-delay: 0.5s;"></div>
+<div class="column" style="animation-delay: 0.6s;"></div>
+<div class="column" style="animation-delay: 0.7s;"></div>
+<div class="column" style="animation-delay: 0.8s;"></div>
+<div class="column" style="animation-delay: 0.9s;"></div>
+
+<div class="column" style="animation-delay: 1s;"></div>
+<div class="column" style="animation-delay: 1.1s;"></div>
+<div class="column" style="animation-delay: 1.2s;"></div>
+<div class="column" style="animation-delay: 1.3s;"></div>
+<div class="column" style="animation-delay: 1.4s;"></div>
+
+<div class="column" style="animation-delay: 1.5s;"></div>
+<div class="column" style="animation-delay: 1.6s;"></div>
+<div class="column" style="animation-delay: 1.7s;"></div>
+<div class="column" style="animation-delay: 1.8s;"></div>
+<div class="column" style="animation-delay: 1.9s;"></div>
+
+<div class="column" style="animation-delay: 2s;"></div>
+<div class="column" style="animation-delay: 2.1s;"></div>
+<div class="column" style="animation-delay: 2.2s;"></div>
+<div class="column" style="animation-delay: 2.3s;"></div>
+<div class="column" style="animation-delay: 2.4s;"></div>
+
+<div class="column" style="animation-delay: 2.5s;"></div>
+<div class="column" style="animation-delay: 2.6s;"></div>
+<div class="column" style="animation-delay: 2.7s;"></div>
+<div class="column" style="animation-delay: 2.8s;"></div>
+<div class="column" style="animation-delay: 2.9s;"></div>
+
+<div class="column" style="animation-delay: 3s;"></div>
+<div class="column" style="animation-delay: 3.1s;"></div>
+<div class="column" style="animation-delay: 3.2s;"></div>
+<div class="column" style="animation-delay: 3.3s;"></div>
+<div class="column" style="animation-delay: 3.4s;"></div>
+
+<div class="column" style="animation-delay: 3.5s;"></div>
+<div class="column" style="animation-delay: 3.6s;"></div>
+<div class="column" style="animation-delay: 3.7s;"></div>
+<div class="column" style="animation-delay: 3.8s;"></div>
+<div class="column" style="animation-delay: 3.9s;"></div>
+
+<div class="column" style="animation-delay: 4s;"></div>
+<div class="column" style="animation-delay: 4.1s;"></div>
+<div class="column" style="animation-delay: 4.2s;"></div>
+<div class="column" style="animation-delay: 4.3s;"></div>
+<div class="column" style="animation-delay: 4.4s;"></div>
+
+<div class="column" style="animation-delay: 4.5s;"></div>
+<div class="column" style="animation-delay: 4.6s;"></div>
+<div class="column" style="animation-delay: 4.7s;"></div>
+<div class="column" style="animation-delay: 4.8s;"></div>
+<div class="column" style="animation-delay: 4.9s;"></div>
+</div>
+
+
+
+</body>
+</html>

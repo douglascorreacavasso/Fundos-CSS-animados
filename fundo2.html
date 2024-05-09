@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundo Animado com Colunas</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: flex-start; /* Alinhamento das colunas no início */
+  }
+
+  .column {
+    background: linear-gradient(to bottom, #cccccc, transparent); /* Gradiente de cinza para transparente */
+    width: 2%; /* Largura de 2% da largura da página */
+    height: 100%;
+    opacity: 0.5;
+    animation: fadeInOut infinite;
+    position: relative; /* Adiciona posição relativa */
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { 
+      opacity: 0; 
+      left: calc(-100% - 2vw); /* Inicia fora da tela à esquerda */
+    }
+    50% { opacity: 0.5; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    color: black; /* Cor do texto */
+  }
+  /* Posicionamento central dos objetos */
+  .centro {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  /* Estilo para os botões */
+  .buttons {
+      top: 1%;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+    
+    .buttons button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Conteúdo da página com barra de rolagem oculta -->
+<div class="content">
+
+    <!-- Botões centralizados -->
+<div class="buttons">
+
+  <h1>Bem-vindo ao Site com Animações!</h1>
+  <p>Aqui você encontrará animações divertidas.</p>
+
+  <button onclick="window.location.href='index.html';">Botão 1</button>
+  <button onclick="window.location.href='fundo2.html';">Botão 2</button>
+  <button onclick="window.location.href='fundo3.html';">Botão 3</button>
+  <button onclick="window.location.href='fundo4.html';">Botão 4</button>
+  <button onclick="window.location.href='fundo5.html';">Botão 5</button>
+  <button onclick="window.location.href='fundo6.html';">Botão 6</button>
+  <button onclick="window.location.href='fundo7.html';">Botão 7</button>
+  <button onclick="window.location.href='fundo8.html';">Botão 8</button>
+  <button onclick="window.location.href='fundo9.html';">Botão 9</button>
+  <button onclick="window.location.href='fundo1.html';">Botão 10</button>
+
+</div>
+</div>
+
+<div class="background" id="background">
+  <!-- As colunas serão criadas pelo JavaScript -->
+</div>
+
+
+<script>
+  // Função para gerar um tempo de animação aleatório entre 0.01s e 3s
+  function randomAnimationTime() {
+    return (Math.random() * (3 - 0.01) + 0.01) + 's';
+  }
+
+  // Função para reiniciar a animação das colunas após a conclusão
+  function restartAnimation(event) {
+    event.target.style.animationDuration = randomAnimationTime(); // Define um novo tempo de animação aleatório
+  }
+
+  // Seleciona o elemento onde as colunas serão inseridas
+  var background = document.getElementById('background');
+
+  // Cria 50 colunas com delay incrementado
+  for (var i = 0; i < 50; i++) {
+    var delay = i * 0.02;
+    var column = document.createElement('div');
+    column.className = 'column';
+    column.style.animationDelay = delay + 's';
+    column.style.animationDuration = randomAnimationTime(); // Define o tempo de animação aleatório
+    column.style.left = Math.random() * 100 + 'vw'; // Define a posição horizontal aleatória
+    column.addEventListener('animationiteration', restartAnimation); // Adiciona um ouvinte de evento para reiniciar a animação
+    background.appendChild(column);
+  }
+</script>
+
+</body>
+</html>

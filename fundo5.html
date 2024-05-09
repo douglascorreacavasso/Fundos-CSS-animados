@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site com Barra de Rolagem Oculta e Animações</title>
+  <style>
+    body {
+text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilo para esconder a barra de rolagem */
+    .content {
+      overflow: hidden; /* Esconde a barra de rolagem */
+      height: 100vh; /* Define a altura da área de conteúdo */
+      position: relative; /* Define a posição relativa para os objetos animados */
+    }
+
+    /* Estilos para os objetos animados */
+    .objeto-animado {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #f00;
+      border-radius: 50%; /* Faz o objeto ser um círculo */
+      animation: moverAleatorio 5s infinite;
+    }
+
+    /* Keyframes para a animação aleatória */
+    @keyframes moverAleatorio {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(300px, -150px); }
+      50% { transform: translate(-200px, 200px); }
+      75% { transform: translate(150px, 300px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    /* Estilo para os botões */
+    .buttons {
+      top: 10%;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+    
+    .buttons button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Conteúdo da página com barra de rolagem oculta -->
+<div class="content">
+  <h1>Bem-vindo ao Site com Animações!</h1>
+  <p>Aqui você encontrará animações divertidas.</p>
+  <!-- Botões centralizados -->
+<div class="buttons">
+  <button onclick="window.location.href='index.html';">Botão 1</button>
+  <button onclick="window.location.href='fundo2.html';">Botão 2</button>
+  <button onclick="window.location.href='fundo3.html';">Botão 3</button>
+  <button onclick="window.location.href='fundo4.html';">Botão 4</button>
+  <button onclick="window.location.href='fundo5.html';">Botão 5</button>
+  <button onclick="window.location.href='fundo6.html';">Botão 6</button>
+  <button onclick="window.location.href='fundo7.html';">Botão 7</button>
+  <button onclick="window.location.href='fundo8.html';">Botão 8</button>
+  <button onclick="window.location.href='fundo9.html';">Botão 9</button>
+  <button onclick="window.location.href='fundo1.html';">Botão 10</button>
+
+</div>
+  <!-- Objetos animados -->
+  <div class="objeto-animado" style="animation-delay: 0s;    left: 50%;
+    top: 35%;"></div>
+  <div class="objeto-animado" style="animation-delay: 1s;    left: 35%;
+    top: 35%;"></div>
+  <div class="objeto-animado" style="animation-delay: 2s;    left: 75%;
+    top: 20%;"></div>
+  <!-- ... mais objetos animados ... -->
+
+</div>
+
+
+
+</body>
+</html>
